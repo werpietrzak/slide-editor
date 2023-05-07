@@ -1,27 +1,6 @@
-import React, { KeyboardEvent, useState } from 'react';
+import React from 'react';
+import { EditableText } from '../editable-text';
 
-export const SlideTitle: React.FC = () => {
-    const [textContent, setTextContent] = useState('Insert a title here');
-    const [showInput, setShowInput] = useState(false);
-
-    const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>): void => {
-        if (event.key === 'Enter') {
-            setShowInput(false);
-        }
-    };
-
-    return (
-        <div>
-            {showInput ? (
-                <input
-                    autoFocus
-                    onBlur={() => setShowInput(false)}
-                    onChange={event => setTextContent(event.target.value)}
-                    onKeyDown={event => handleKeyDown(event)}
-                />
-            ) : (
-                <span onClick={() => setShowInput(true)}>{textContent}</span>
-            )}
-        </div>
-    );
-};
+export const SlideTitle: React.FC = () => (
+    <EditableText placeholderText="Insert a title here" />
+);
