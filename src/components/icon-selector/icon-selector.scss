@@ -1,0 +1,17 @@
+.icon-select {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+    }
+
+    &__icons-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        & .material-icons {
+            margin: 4px;
+        }
+    }
+}

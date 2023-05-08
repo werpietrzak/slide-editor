@@ -1,14 +1,17 @@
 import React from 'react';
 import { Icons } from '../../constants';
+import './icon-selector.scss';
 
 interface IconSelectorProps {
     onIconSelect: (iconName: string) => void;
 }
 
+const CN = 'icon-select';
+
 export const IconSelector: React.FC<IconSelectorProps> = ({ onIconSelect }) => (
-    <div>
-        <p>Select an icon:</p>
-        <div>
+    <div className={`${CN}__container`}>
+        <span>Select an icon:</span>
+        <div className={`${CN}__icons-grid`}>
             {Object.values(Icons).map(iconName => (
                 <span
                     key={iconName}
