@@ -1,0 +1,13 @@
+.dnd-area {
+    &__horizontal-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__draggable {
+        &:hover {
+            outline: 4px solid #3567f050;
+            border-radius: 2px;
+        }
+    }
+}
