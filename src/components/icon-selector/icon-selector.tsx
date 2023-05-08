@@ -11,6 +11,7 @@ export const IconSelector: React.FC<IconSelectorProps> = ({ onIconSelect }) => (
         <div>
             {Object.values(Icons).map(iconName => (
                 <span
+                    key={iconName}
                     className="material-icons"
                     onClick={() => onIconSelect(iconName)}
                 >

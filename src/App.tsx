@@ -1,13 +1,12 @@
 import React from 'react';
-import { IconSection } from './components/icon-section';
+import { SlideContent } from './components/slide-content';
 import { SlideTitle } from './components/slide-title';
-
 import './App.css';
 
 const App: React.FC = () => (
     <>
         <SlideTitle />
-        <IconSection placeholderIcon="favorite" />
+        <SlideContent />
     </>
 );
 
