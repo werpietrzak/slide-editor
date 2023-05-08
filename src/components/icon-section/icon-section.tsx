@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { Popover } from '@mui/material';
 import { EditableText } from '../editable-text';
 import { IconSelector } from '../icon-selector';
+import './icon-section.scss';
 
 interface IconSectionProps {
     placeholderIcon: string;
 }
+
+const CN = 'icon-section';
 
 export const IconSection: React.FC<IconSectionProps> = ({
     placeholderIcon,
@@ -27,10 +30,10 @@ export const IconSection: React.FC<IconSectionProps> = ({
     };
 
     return (
-        <div>
-            <div onClick={openIconSelect}>
-                <span className="material-icons">{selectedIcon}</span>
-            </div>
+        <div className={`${CN}__container`}>
+            <span className="material-icons" onClick={openIconSelect}>
+                {selectedIcon}
+            </span>
             <Popover
                 open={Boolean(anchorEl)}
                 anchorEl={anchorEl}
@@ -46,8 +49,14 @@ export const IconSection: React.FC<IconSectionProps> = ({
             >
                 <IconSelector onIconSelect={handleSelectIcon} />
             </Popover>
-            <EditableText placeholderText="Insert text here" />
-            <EditableText placeholderText="Add here your additional text" />
+            <EditableText
+                placeholderText="Insert text here"
+                className={`${CN}__title`}
+            />
+            <EditableText
+                placeholderText="Add here your additional text"
+                className={`${CN}__subtitle`}
+            />
         </div>
     );
 };

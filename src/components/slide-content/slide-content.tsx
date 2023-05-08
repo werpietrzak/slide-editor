@@ -3,6 +3,9 @@ import { DragAndDropArea } from '../drag-and-drop-area';
 import { IconSection } from '../icon-section';
 import { Icons } from '../../constants';
 import { DraggableItem } from '../../models';
+import './slide-content.scss';
+
+const CN = 'slide-content';
 
 export const SlideContent: React.FC = () => {
     const items: DraggableItem[] = [
@@ -21,10 +24,12 @@ export const SlideContent: React.FC = () => {
     ];
 
     return (
-        <DragAndDropArea
-            id="slide-content-area"
-            direction="horizontal"
-            draggableItems={items}
-        />
+        <div className={`${CN}__container`}>
+            <DragAndDropArea
+                id="slide-content-area"
+                direction="horizontal"
+                draggableItems={items}
+            />
+        </div>
     );
 };
