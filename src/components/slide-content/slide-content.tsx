@@ -3,7 +3,6 @@ import { DragAndDropArea } from '../drag-and-drop-area';
 import { IconSection } from '../icon-section';
 import { Icons } from '../../constants';
 import { DraggableItem } from '../../models';
-import './slide-content.scss';
 
 export const SlideContent: React.FC = () => {
     const items: DraggableItem[] = [
