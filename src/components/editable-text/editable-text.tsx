@@ -26,6 +26,7 @@ export const EditableText: React.FC<EditableTextProps> = ({
             {showInput ? (
                 <input
                     autoFocus
+                    className={`${className} ${CN}__input`}
                     onBlur={() => setShowInput(false)}
                     onChange={event => setTextContent(event.target.value)}
                     onKeyDown={event => handleKeyDown(event)}
