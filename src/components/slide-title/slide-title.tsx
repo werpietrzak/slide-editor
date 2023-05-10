@@ -5,5 +5,7 @@ import './slide-title.scss';
 const CN = 'slide-title';
 
 export const SlideTitle: React.FC = () => (
-    <EditableText placeholderText="Insert a title here" className={CN} />
+    <div className={`${CN}__container`}>
+        <EditableText placeholderText="Insert a title here" className={CN} />
+    </div>
 );

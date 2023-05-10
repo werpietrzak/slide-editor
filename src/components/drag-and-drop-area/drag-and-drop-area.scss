@@ -1,3 +1,5 @@
+@use '../../styles/colors.scss';
+
 .dnd-area {
     &__horizontal-container {
         display: flex;
@@ -6,7 +8,7 @@
 
     &__draggable {
         &:hover {
-            outline: 4px solid #3567f050;
+            outline: 4px solid colors.$active-item-outline;
             border-radius: 2px;
         }
     }
