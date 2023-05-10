@@ -12,9 +12,10 @@ body {
     &__slide-card {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        width: 1000px;
-        height: 500px;
+        width: 750px;
+        height: 400px;
         padding: 40px;
     }
 }

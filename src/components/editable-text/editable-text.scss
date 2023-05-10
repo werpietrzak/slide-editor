@@ -1,0 +1,12 @@
+.editable-text {
+    &__container {
+        text-align: center;
+    }
+
+    &__input {
+        box-shadow: none;
+        border: none;
+        outline: none;
+        background: none;
+    }
+}
