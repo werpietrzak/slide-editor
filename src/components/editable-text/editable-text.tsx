@@ -12,10 +12,10 @@ export const EditableText: React.FC<EditableTextProps> = ({
     placeholderText,
     className,
 }) => {
-    const [textContent, setTextContent] = useState(placeholderText);
-    const [showInput, setShowInput] = useState(false);
+    const [textContent, setTextContent] = useState<string>(placeholderText);
+    const [showInput, setShowInput] = useState<boolean>(false);
 
-    const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>): void => {
+    const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             setShowInput(false);
         }
@@ -30,6 +30,7 @@ export const EditableText: React.FC<EditableTextProps> = ({
                     onBlur={() => setShowInput(false)}
                     onChange={event => setTextContent(event.target.value)}
                     onKeyDown={event => handleKeyDown(event)}
+                    value={textContent === placeholderText ? '' : textContent}
                 />
             ) : (
                 <span className={className} onClick={() => setShowInput(true)}>

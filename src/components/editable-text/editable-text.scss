@@ -1,12 +1,19 @@
+@use '../../styles/colors.scss';
+
 .editable-text {
     &__container {
+        width: inherit;
+        font-family: 'Roboto', sans-serif;
         text-align: center;
+        word-wrap: break-word;
     }
 
     &__input {
         box-shadow: none;
         border: none;
-        outline: none;
+        border-radius: 2px;
+        outline: 3px solid colors.$active-item-outline;
         background: none;
+        font-family: 'Roboto', sans-serif;
     }
 }

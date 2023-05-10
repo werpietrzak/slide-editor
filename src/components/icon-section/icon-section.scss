@@ -1,3 +1,5 @@
+@use '../../styles/colors.scss';
+
 .icon-section {
     &__container {
         display: flex;
@@ -14,8 +16,9 @@
     }
 
     &__title {
-        background-color: #6495ed;
+        background-color: colors.$title-bg;
         font-size: 24px;
+        font-weight: 700;
         width: 150px;
     }
 

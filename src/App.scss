@@ -1,5 +1,7 @@
+@use './styles/colors.scss';
+
 body {
-    background-color: #f0f8ff;
+    background-color: colors.$bg-color;
 }
 
 .app {

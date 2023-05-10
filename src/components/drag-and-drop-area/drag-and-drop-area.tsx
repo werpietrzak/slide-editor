@@ -21,7 +21,7 @@ export const DragAndDropArea: React.FC<DragAndDropAreaProps> = ({
     direction,
     draggableItems,
 }) => {
-    const [items, setItems] = useState(draggableItems);
+    const [items, setItems] = useState<DraggableItem[]>(draggableItems);
 
     const handleDragEnd: OnDragEndResponder = result => {
         if (!result.destination) {
